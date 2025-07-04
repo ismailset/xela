@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-instagram-blue text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-sm text-sm placeholder-gray-500 focus:border-gray-400 focus:bg-white transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white border border-gray-300 rounded-lg shadow-sm;
+  }
+
+  .avatar {
+    @apply rounded-full object-cover border-2 border-gray-200;
+  }
+
+  .avatar-sm {
+    @apply w-8 h-8;
+  }
+
+  .avatar-md {
+    @apply w-12 h-12;
+  }
+
+  .avatar-lg {
+    @apply w-24 h-24;
+  }
+
+  .avatar-xl {
+    @apply w-32 h-32;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent;
+  }
+
+  .story-ring {
+    @apply bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-full p-0.5;
+  }
+}
+
+@layer utilities {
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
